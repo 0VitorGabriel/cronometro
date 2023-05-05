@@ -27,6 +27,7 @@
     font-size: 2em;
     font-weight: 900;
     text-align: center;
+
 }
 
 .horas {
@@ -56,8 +57,28 @@ button {
 
 .btn_reiniciar {
     transform: translate(178px, -60px);
+
+    display: none;
 }
 
 .btn_pausar {
     transform: translate(283px, -60px);
+
+    display: none;
+}
+
+.btn_comecar {
+    margin: auto;
+
+    display: block;
+
+    transform: translateY(-70px);
+}
+
+.remove_btn {
+    display: none;
+}
+
+.show_btn {
+    display: inline;
 }

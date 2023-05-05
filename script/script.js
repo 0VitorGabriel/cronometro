@@ -1,5 +1,9 @@
 const btn_start = document.querySelector('.btn_comecar')
 
+const btn_restart = document.querySelector('.btn_reiniciar')
+
+const btn_pause = document.querySelector('.btn_pausar')
+
 const area_seconds = document.querySelector('.segundos')
 
 const area_minutes = document.querySelector('.minutos')
@@ -13,6 +17,12 @@ let hours = 0
 btn_start.addEventListener('click', show_temp)
 
 function show_temp() {
+    btn_start.classList.add('remove_btn')
+
+    btn_restart.classList.add('show_btn')
+
+    btn_pause.classList.add('show_btn')
+
     if (seconds == 59) {
         seconds = 0
 
