@@ -18,7 +18,14 @@ let seconds = 0
 let minutes = 0
 let hours = 0
 
-btn_start.addEventListener('click', show_temp)
+btn_start.addEventListener('click', start)
+
+let interval
+
+function start() {
+    show_temp()
+    interval = setInterval('show_temp()', 1000)
+}
 
 function show_temp() {
     btn_start.classList.add('remove_btn')
@@ -47,8 +54,26 @@ function show_temp() {
 
     seconds += 1
     area_seconds.innerHTML = seconds
-
-    setTimeout('show_temp()', 1000)
 }
 
 
+btn_restart.addEventListener('click', () => {
+    clearInterval(interval)
+    seconds = 0 
+    minutes = 0
+    hours = 0
+
+    area_seconds.innerHTML = seconds
+    area_minutes.innerHTML = minutes
+    area_hours.innerHTML = hours
+
+    btn_start.classList.remove('remove_btn')
+
+    btn_restart.classList.remove('show_btn')
+
+    btn_pause.classList.remove('show_btn')
+}) 
+
+btn_pause.addEventListener('click', () => {
+    clearInterval(interval)
+})
