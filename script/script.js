@@ -1,8 +1,12 @@
+// botões
+
 const btn_start = document.querySelector('.btn_comecar')
 
 const btn_restart = document.querySelector('.btn_reiniciar')
 
 const btn_pause = document.querySelector('.btn_pausar')
+
+// divs para mostrar o tempo
 
 const area_seconds = document.querySelector('.segundos')
 
