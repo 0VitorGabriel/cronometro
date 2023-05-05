@@ -1,0 +1,63 @@
+* {
+    padding: 0px;
+    margin: 0px;
+
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    background-color: #000000;
+
+    width: 662px;
+    height: 300px;
+
+    margin: 10px auto;
+
+    border-radius: 10px;
+}
+
+.horas, .minutos, .segundos {
+    background-color: #ffffff;
+
+    width: 100px;
+    height: 100px;
+
+    border-radius: 10px;
+
+    font-size: 2em;
+    font-weight: 900;
+    text-align: center;
+}
+
+.horas {
+    transform: translate(60px, 100px);
+}
+
+.minutos {
+    transform: translateX(280px);
+}
+
+.segundos {
+    transform: translate(490px, -100px);
+}
+
+button {
+    background-color: #FFFFFF;
+
+    padding: 10px;
+
+    border-radius: 10px;
+    width: 100px;
+}
+
+.btn_comecar {
+    transform: translate(60px, -60px);
+}
+
+.btn_reiniciar {
+    transform: translate(178px, -60px);
+}
+
+.btn_pausar {
+    transform: translate(283px, -60px);
+}
