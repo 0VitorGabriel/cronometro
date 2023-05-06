@@ -47,11 +47,14 @@ function show_temp() {
         minutes = 0
     }
 
-    area_seconds.textContent = seconds
-    area_minutes.textContent = minutes
-    area_hours.textContent = hours
+    area_seconds.textContent = formatTime(seconds)
+    area_minutes.textContent = formatTime(minutes)
+    area_hours.textContent = formatTime(hours)
 }
 
+function formatTime(time) {
+    return time < 10 ? (`0${time}`) : time
+}
 
 btn_restart.addEventListener('click', () => {
     clearInterval(interval)

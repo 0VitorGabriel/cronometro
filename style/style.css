@@ -5,15 +5,8 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.container {
+body {
     background-color: #000000;
-
-    width: 662px;
-    height: 300px;
-
-    margin: 10px auto;
-
-    border-radius: 10px;
 }
 
 .horas, .minutos, .segundos {
