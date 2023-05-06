@@ -31,10 +31,6 @@ div.miliseconds {
     font-size: 3em;
 }
 
-button.btn_back {
-    display: none;
-}
-
 .buttons {
     display: flex;
 
@@ -52,4 +48,9 @@ button.btn_start {
     background-color: #2828eb;
 
     color: #FFFFFF;
+    display: inline;
+}
+
+button {
+    display: none;
 }
