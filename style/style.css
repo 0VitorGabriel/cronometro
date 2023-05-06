@@ -2,76 +2,31 @@
     padding: 0px;
     margin: 0px;
 
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Orbitron', sans-serif;
 }
 
-body {
-    background-color: #000000;
-}
-
-.horas, .minutos, .segundos {
-    background-color: #ffffff;
-
-    width: 100px;
-    height: 100px;
-
-    border-radius: 10px;
-
-    font-size: 2em;
-    font-weight: 900;
+h1 {
     text-align: center;
-
+    margin-top: 20px;
 }
 
-.horas {
-    transform: translate(60px, 100px);
+div.timer {
+    display: flex;
+
+    flex-direction: row;
+
+    justify-content: center;
+
+    margin-top: 50px;
 }
 
-.minutos {
-    transform: translateX(280px);
+div.minutes, div.seconds, div.miliseconds {
+    margin: 10px;
+
+    font-size: 5em;
 }
 
-.segundos {
-    transform: translate(490px, -100px);
-}
-
-button {
-    background-color: #FFFFFF;
-
-    padding: 10px;
-
-    border-radius: 10px;
-    width: 100px;
-}
-
-.btn_comecar {
-    transform: translate(60px, -60px);
-}
-
-.btn_reiniciar {
-    transform: translate(178px, -60px);
-
-    display: none;
-}
-
-.btn_pausar {
-    transform: translate(283px, -60px);
-
-    display: none;
-}
-
-.btn_comecar {
-    margin: auto;
-
-    display: block;
-
-    transform: translateY(-70px);
-}
-
-.remove_btn {
-    display: none;
-}
-
-.show_btn {
-    display: inline;
+div.miliseconds {
+    margin-top: 45px;
+    font-size: 3em;
 }
