@@ -31,13 +31,13 @@ function start() {
     btn_restart.style.display = 'inline'
 
     show_temp()
-    interval = setInterval('show_temp()', 1)
+    interval = setInterval('show_temp()', 12)
 }
 
 function show_temp() {
     miliSeconds++
 
-    if (miliSeconds == 1000) {
+    if (miliSeconds == 100) {
         seconds++
         miliSeconds = 0
     }
@@ -53,7 +53,7 @@ function show_temp() {
 }
 
 function formatTime(time) {
-    return time < 10 ? (`0${time}  :`) : time
+    return time < 10 ? (`0${time}  :`) : (`${time}  :`)
 }
 
 function formatTimeMiliSeconds(time) {
@@ -73,17 +73,19 @@ btn_restart.addEventListener('click', () => {
     btn_pause.style.display = 'none'
     btn_back.style.display = 'none'
     btn_start.style.display = 'inline'
-    btn_restart.style.display = 'inline'
+    btn_restart.style.display = 'none'
 }) 
 
 btn_pause.addEventListener('click', () => {
     clearInterval(interval)
 
     btn_back.style.display = 'inline'
+    btn_pause.style.display = 'none'
 })
 
 btn_back.addEventListener('click', () => {
     start()
 
     btn_back.style.display = 'none'
+    btn_pause.style.display = 'inline'
 })
