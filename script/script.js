@@ -26,6 +26,9 @@ let interval
 
 function start() {
     btn_start.style.display = 'none'
+    btn_back.style.display = 'none'
+    btn_pause.style.display = 'inline'
+    btn_restart.style.display = 'inline'
 
     show_temp()
     interval = setInterval('show_temp()', 1)
@@ -46,11 +49,15 @@ function show_temp() {
 
     area_seconds.textContent = formatTime(seconds)
     area_minutes.textContent = formatTime(minutes)
-    area_miliseconds.textContent = miliSeconds
+    area_miliseconds.textContent = formatTimeMiliSeconds(miliSeconds)
 }
 
 function formatTime(time) {
     return time < 10 ? (`0${time}  :`) : time
+}
+
+function formatTimeMiliSeconds(time) {
+    return time < 100 ? `${time}`.padStart(3, "0") : time
 }
 
 btn_restart.addEventListener('click', () => {
@@ -61,9 +68,12 @@ btn_restart.addEventListener('click', () => {
 
     area_seconds.textContent = formatTime(seconds)
     area_minutes.textContent = formatTime(minutes)
-    area_miliseconds.textContent = miliSeconds
+    area_miliseconds.textContent = formatTimeMiliSeconds(miliSeconds)
 
+    btn_pause.style.display = 'none'
+    btn_back.style.display = 'none'
     btn_start.style.display = 'inline'
+    btn_restart.style.display = 'inline'
 }) 
 
 btn_pause.addEventListener('click', () => {
