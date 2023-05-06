@@ -30,3 +30,24 @@ div.miliseconds {
     margin-top: 45px;
     font-size: 3em;
 }
+
+
+.buttons {
+    display: flex;
+
+    flex-direction: row;
+    justify-content: center;
+}
+
+.buttons > button {
+    padding: 12px;
+    border-radius: 20px;
+    margin: 0px 10px;
+}
+
+
+button.btn_start {
+    background-color: rgb(40, 40, 235);
+
+    color: #FFFFFF;
+}
