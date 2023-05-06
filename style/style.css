@@ -45,9 +45,8 @@ div.miliseconds {
     margin: 0px 10px;
 }
 
-
 button.btn_start {
-    background-color: rgb(40, 40, 235);
+    background-color: #2828eb;
 
     color: #FFFFFF;
 }
