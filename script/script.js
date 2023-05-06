@@ -34,26 +34,22 @@ function show_temp() {
 
     btn_pause.classList.add('show_btn')
 
-    if (seconds == 59) {
+    seconds++
+
+    if (seconds == 60) {
+        minutes++
         seconds = 0
+    }
 
-        if (minutes == 59) {
-            minutes = 0
-            hours += 1
 
-            area_hours.innerHTML = hours
+    if (minutes == 60) {
+        hours++
+        minutes = 0
+    }
 
-            area_minutes.innerHTML = minutes
-        } else {
-
-            minutes += 1 
-
-            area_minutes.innerHTML = minutes
-        }
-    } 
-
-    seconds += 1
-    area_seconds.innerHTML = seconds
+    area_seconds.textContent = seconds
+    area_minutes.textContent = minutes
+    area_hours.textContent = hours
 }
 
 
@@ -63,9 +59,9 @@ btn_restart.addEventListener('click', () => {
     minutes = 0
     hours = 0
 
-    area_seconds.innerHTML = seconds
-    area_minutes.innerHTML = minutes
-    area_hours.innerHTML = hours
+    area_seconds.textContent = seconds
+    area_minutes.textContent = minutes
+    area_hours.textContent = hours
 
     btn_start.classList.remove('remove_btn')
 
