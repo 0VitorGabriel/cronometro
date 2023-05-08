@@ -54,3 +54,14 @@ button.btn_start {
 button {
     display: none;
 }
+
+@media screen and (max-width: 530px){
+    div.minutes, div.seconds {
+        font-size: 3em;
+    }
+
+    div.miliseconds {
+        transform: translateY(-20px);
+        font-size: 2em;
+    }
+}
